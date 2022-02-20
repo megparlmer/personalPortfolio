@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: slateblue;
+    font-family:'Times New Roman', Times, serif;
+}
+/* nav bar */
+header {
+    height: 100px;
+    display: flex;
+    background-color: lavenderblush;
+    justify-content: space-around;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header ul li a {
+    padding: 0px 20px;
+    text-decoration: none;
+    color: slateblue;
+    display: inline-block;
+    font-size: 22px;
+}
+
+li a::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background: lavender;
+    transition: all .5s;
+}
+
+li a:hover::after {
+    width: 100%;
+    color: black;
+}
+/* nav bar ends*/
+
+/* about me section with image */
+main {
+    display: flex;
+    height: calc(100vh - 100px);
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    position: relative;
+}
+
+main h2 {
+    font-size: 30px;
+}
+
+main p {
+    font-size: 25px;
+    font-weight: heavy;
+}
+
+main > * {
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+.hero-img {
+    padding-top: 20px;
+    max-width: 600px;
+    height: auto;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.hero-img:hover {
+    opacity: 0.3;
+    backface-visibility: visible;
+}
+
+.hero-img-text {
+    transition: 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.hero-img-text:hover {
+    backface-visibility: visible;
+
+}
+
+.about-me {
+    width: 20%;
+    margin: 10px;
+}
+
+.about-me h2 {
+    border-bottom: 2px solid;
+    padding-bottom: 20px;
+
+}
+
+.about-me p {
+    padding-top: 20px;
+    text-align: center;
+}
+/*about me ends*/
+
+/*projects*/
+
+.my-work {
+    width: 20%;
+    margin: 10px;
+    transition: 0.5 ease-in-out;
+}
+
+.my-work h2 {
+    border-bottom: 2px solid;
+    padding-bottom: 20px;
+}
+
+.screenshot-image {
+    padding-top: 20px;
+    opacity: 1;
+    display: block;
+    width: auto;
+    height: auto;
+    transition: 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.screenshot-image:hover {
+    opacity: 0.3;
+    background-color: lavenderblush;
+}
+/*footer and contact info*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: lavenderblush;
+    width: 100%;
+    padding: 30px 20px;
+    align-items: center;
+}
+
+footer div {
+    line-height: 1.5;
+}
+
+footer ul {
+    display: flex;
+    list-style-type: none;
+}
+
+footer ul li a {
+    padding: 0px 20px;
+    text-decoration: none;
+    color: slateblue;
+    display: inline-block;
+    font-size: 22px;
+}
+
+/*for smaller desktop screens and smaller*/
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    main h2 {
+        display
+    }
+}
+
+/*for tablets and smaller*/
+@media screen and (max-width: 768px) {
+    main {
+        padding: 30px 15px;
+    }
+
+    .about-me h2 {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .about-me p {
+        flex 2 100%;
+        text-align: center;
+    }
+
+    .hero-img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 700px;
+    }
+
+    .screenshot-image {
+        flex: 0 32%;
+        margin-left: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+/*for mobile phones and smaller*/
+@media screen and (max-width: 575px) {
+    .hero-img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 500px;
+    }
+}
