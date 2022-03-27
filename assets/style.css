@@ -149,6 +149,19 @@ main > * {
     background-color: lavenderblush;
 }
 
+.webpage-image {
+    max-width:100%;
+    max-height:100%;
+    object-fit: contain;
+    transition: 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.webpage-image:hover {
+    opacity: 0.3;
+    background-color: lavenderblush;
+}
+
 /*footer and contact info*/
 footer {
     display: flex;
@@ -204,10 +217,6 @@ footer ul li a {
         text-align: center;
         width: 100%;
     }
-
-    main h2 {
-        display
-    }
 }
 
 /*for tablets and smaller*/
@@ -222,7 +231,7 @@ footer ul li a {
     }
 
     .about-me p {
-        flex 2 100%;
+        flex: 2 100%;
         text-align: center;
     }
 
